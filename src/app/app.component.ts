@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PopupService } from './services/popup.service';
 
 @Component({
   selector: 'ang-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ang-element';
+  constructor(public popup: PopupService) { }
 }
