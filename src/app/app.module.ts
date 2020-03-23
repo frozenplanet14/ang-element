@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { PopupComponent } from './popup/popup.component';
 import { QuizLoaderComponent } from './quiz-loader/quiz-loader.component';
 import { LazyCompDirective } from './two-lazy/lazy-comp.directive';
+import { TestHeroComponent } from './test-hero/test-hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PopupComponent,
     QuizLoaderComponent,
-    LazyCompDirective
+    LazyCompDirective,
+    TestHeroComponent
   ],
   imports: [
     BrowserModule,
