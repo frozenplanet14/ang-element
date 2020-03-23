@@ -1,0 +1,9 @@
+<mat-tab-group>
+  <mat-tab label="First">
+    <lib-quill-editor [(html)]="html"></lib-quill-editor>
+    <pre>{{ html | json }}</pre>
+  </mat-tab>
+  <mat-tab label="Second">
+    <lib-quill-editor [(html)]="html2"></lib-quill-editor>
+  </mat-tab>
+</mat-tab-group>

@@ -1,3 +1,23 @@
-<input #input value="Message">
+<!-- Basic angular element -->
+<mat-form-field>
+  <input matInput #input value="Message">
+</mat-form-field>
 
-<button (click)="popup.showAsElement(input.value)">Show as element</button>
+<button mat-raised-button color="warn" (click)="popup.showAsElement(input.value)" class="margin-button">Show as
+  element</button>
+
+
+<!-- Dynamically loading module -->
+<button mat-raised-button color="accent" (click)="loadOne()">Load OneLazy</button>
+<ng-container *ngIf="one">
+  <ng-template [ngComponentOutletInjector]="oneInjector" [ngComponentOutlet]="one | async"></ng-template>
+  <!-- [outputs]="outputs" -->
+  <ng-template [angLazyComp]="one | async" [inputs]="inputData"></ng-template>
+</ng-container>
+
+<!-- Dynamic loading component: https://medium.com/angular-in-depth/lazy-load-components-in-angular-596357ab05d8 -->
+<ang-quiz-loader></ang-quiz-loader>
+
+<!-- Loading external library lazily: https://codeburst.io/lazy-loading-external-javascript-libraries-in-angular-3d86ada54ec7 -->
+<a mat-raised-button [routerLink]="['/editor']">Editor</a>
+<router-outlet></router-outlet>
