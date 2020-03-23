@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {
-    path: 'editor',
-    loadChildren: () => import('security-app').then(m => m.SecurityAppModule)
-  }
+  // {
+  //   path: 'editor',
+  //   loadChildren: () => import('security-app').then(m => m.SecurityAppModule)
+  // }
 ];
 
 @NgModule({

@@ -22,6 +22,10 @@
       "security-app": [
         "dist/security-app/security-app",
         "dist/security-app"
+      ],
+      "lazy-element": [
+        "dist/lazy-element/lazy-element",
+        "dist/lazy-element"
       ]
     }
   },

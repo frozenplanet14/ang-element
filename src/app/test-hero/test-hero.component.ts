@@ -20,4 +20,12 @@ export class TestHeroComponent implements OnInit {
     );
   }
 
+  // private async loadModuleFactory(t: any) {
+  //   if (t instanceof NgModuleFactory) {
+  //     return t;
+  //   } else {
+  //     return await this.compiler.compileModuleAsync(t);
+  //   }
+  // }
+
 }

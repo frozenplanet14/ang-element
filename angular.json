@@ -157,6 +157,46 @@
           }
         }
       }
+    },
+    "lazyElement": {
+      "projectType": "library",
+      "root": "projects/lazy-element",
+      "sourceRoot": "projects/lazy-element/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lazy-element/tsconfig.lib.json",
+            "project": "projects/lazy-element/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lazy-element/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lazy-element/src/test.ts",
+            "tsConfig": "projects/lazy-element/tsconfig.spec.json",
+            "karmaConfig": "projects/lazy-element/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lazy-element/tsconfig.lib.json",
+              "projects/lazy-element/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ang-element",

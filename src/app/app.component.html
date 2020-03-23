@@ -6,6 +6,10 @@
 <button mat-raised-button color="warn" (click)="popup.showAsElement(input.value)" class="margin-button">Show as
   element</button>
 
+<!-- Angular Dynamic loading with angular element -->
+<div id="user-container" #userContainer></div>
+<button mat-raised-button (click)="onLoadUsers()" class="margin-button">User List</button>
+
 
 <!-- Dynamically loading module -->
 <button mat-raised-button color="accent" (click)="loadOne()">Load OneLazy</button>
