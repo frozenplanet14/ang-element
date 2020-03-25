@@ -44,7 +44,7 @@ export class AppComponent {
           name: 'Steffi'
         }
       ];
-
+      console.log(componentEl);
       this.userContainer.nativeElement
         .appendChild(componentEl);
     });

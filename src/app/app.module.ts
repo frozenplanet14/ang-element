@@ -13,6 +13,9 @@ import { PopupComponent } from './popup/popup.component';
 import { QuizLoaderComponent } from './quiz-loader/quiz-loader.component';
 import { LazyCompDirective } from './two-lazy/lazy-comp.directive';
 import { TestHeroComponent } from './test-hero/test-hero.component';
+import { setInjector } from 'lazy-element';
+
+// import { setInjector } from 'lazy-element';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { TestHeroComponent } from './test-hero/test-hero.component';
 })
 export class AppModule {
   constructor(private injector: Injector) {
+    setInjector(injector);
     const popupElement = createCustomElement(PopupComponent, { injector: this.injector }) as any;
     customElements.define('ang-popup', popupElement);
   }
